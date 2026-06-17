@@ -1,39 +1,24 @@
 name: deploy-book
-
-# Construye el libro y lo publica en GitHub Pages cada vez que haces push a main.
 on:
   push:
-    branches:
-      - main
-
-# Permisos necesarios para publicar en GitHub Pages
+    branches: [main]
 permissions:
   contents: read
   pages: write
   id-token: write
-
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Instalar dependencias
-        run: pip install -r requirements.txt
-
-      - name: Construir el libro
-        run: jupyter-book build .
-
-      - name: Subir el sitio construido
-        uses: actions/upload-pages-artifact@v3
+      - run: pip install -r requirements.txt
+        working-directory: ml-book
+      - run: jupyter-book build .
+        working-directory: ml-book
+      - uses: actions/upload-pages-artifact@v3
         with:
-          path: "_build/html"
-
-      - name: Publicar en GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          path: "ml-book/_build/html"
+      - uses: actions/deploy-pages@v4
