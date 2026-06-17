@@ -44,7 +44,7 @@ parse:
 # IMPORTANTE: cambia 'usuario' y 'ml-book' por tu cuenta y tu repo de GitHub.
 #######################################################################################
 repository:
-  url: https://github.com/usuario/ml-book   # <-- CAMBIA ESTO
+  url: https://github.com/jmsocuellamos/ml-book   # <-- CAMBIA ESTO
   branch: main
   path_to_book: ""                          # ruta del libro dentro del repo (vacío si está en la raíz)
 
