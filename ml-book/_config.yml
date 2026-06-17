@@ -1,0 +1,65 @@
+#######################################################################################
+# Configuración del libro (Jupyter Book). Edita aquí título, autor, logo y opciones.
+#######################################################################################
+
+title: "Machine Learning 1 — Clasificación y reducción de la dimensión"
+author: "Core Analytics"
+copyright: "2026"
+
+# Ficheros que NO forman parte del libro
+exclude_patterns:
+  - README.md
+  - .github/*
+# logo: logo.png          # (opcional) descomenta y añade un logo.png en la raíz del libro
+
+# Texto que aparece al pie de cada página (opcional)
+# Del dato a la decisión.
+
+#######################################################################################
+# Ejecución de los cuadernos al construir el libro.
+#  - "off"   : NO ejecuta; conserva las salidas ya guardadas en cada .ipynb (recomendado).
+#  - "auto"  : ejecuta los que no tengan salidas.
+#  - "force" : ejecuta siempre.
+#######################################################################################
+execute:
+  execute_notebooks: "off"
+  timeout: 120
+
+# Permite celdas con errores sin abortar la construcción (útil mientras editas)
+  allow_errors: false
+
+#######################################################################################
+# Parsing de Markdown: habilita extensiones útiles (notas, fórmulas, etc.)
+#######################################################################################
+parse:
+  myst_enable_extensions:
+    - amsmath          # entornos LaTeX (align, etc.)
+    - dollarmath       # fórmulas con $ ... $ y $$ ... $$
+    - colon_fence
+    - deflist
+    - linkify
+
+#######################################################################################
+# Botones de interacción: "Open in Colab" y enlace al repositorio.
+# IMPORTANTE: cambia 'usuario' y 'ml-book' por tu cuenta y tu repo de GitHub.
+#######################################################################################
+repository:
+  url: https://github.com/usuario/ml-book   # <-- CAMBIA ESTO
+  branch: main
+  path_to_book: ""                          # ruta del libro dentro del repo (vacío si está en la raíz)
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  home_page_in_navbar: true
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  notebook_interface: "classic"
+
+#######################################################################################
+# Opciones de LaTeX/PDF (opcional). Permite generar también un PDF del libro.
+#######################################################################################
+sphinx:
+  config:
+    language: es

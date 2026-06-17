@@ -1,0 +1,46 @@
+# Tabla de contenidos del libro.
+# -------------------------------------------------------------------
+# CÓMO EDITAR:
+#   * Añadir un cuaderno  -> añade una línea "- file: bloqueN/nombre_sin_extension"
+#   * Quitar un cuaderno  -> borra su línea
+#   * Reordenar           -> mueve las líneas (el orden aquí es el orden del libro)
+#   * Añadir un bloque    -> añade otro "- caption:" con su lista de "chapters:"
+# Las rutas NO llevan la extensión .ipynb / .md
+# -------------------------------------------------------------------
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: "1) Fundamentos de matemáticas y aprendizaje automático"
+    chapters:
+      - file: bloque1/A_01_fundamentos_matematicas_ML
+      - file: bloque1/A_02_introduccion_aprendizaje_automatico
+
+  - caption: "2) Introducción a scikit-learn"
+    chapters:
+      - file: bloque2/index
+
+  - caption: "3) Aprendizaje no supervisado"
+    chapters:
+      - file: bloque3/index
+
+  - caption: "4) Aprendizaje supervisado inicial"
+    chapters:
+      - file: bloque4/index
+
+  - caption: "5) Aprendizaje supervisado avanzado"
+    chapters:
+      - file: bloque5/index
+
+  - caption: "6) Complementos"
+    chapters:
+      - file: bloque6/index
+
+  - caption: "7) Laboratorios de casos prácticos"
+    chapters:
+      - file: bloque7/index
+
+  - caption: "8) Proyectos"
+    chapters:
+      - file: bloque8/index
