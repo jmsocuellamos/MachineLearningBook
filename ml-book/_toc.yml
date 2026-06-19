@@ -14,8 +14,8 @@ root: intro
 parts:
   - caption: "1) Fundamentos de matemáticas y aprendizaje automático"
     chapters:
-      - file: bloque1/A_01_Fundamentos_de_matematicas_para_machine_learning
-      - file: bloque1/A_02_Introduccion_al_aprendizaje_automático
+      - file: bloque1/A_01_Fundamentos_matematicas_para_AA
+      - file: bloque1/A_02_Intro_al_AA
 
   - caption: "2) Introducción a scikit-learn"
     chapters:
