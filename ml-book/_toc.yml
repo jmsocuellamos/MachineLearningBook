@@ -19,7 +19,9 @@ parts:
 
   - caption: "2) Introducción a scikit-learn"
     chapters:
-      - file: bloque2/index
+      - file: bloque2/B_01_Intro_a_scikit_learn
+      - file: bloque2/B_02_Scikit_learn_para_modelos_clas
+      - file: bloque2/B_03_Estudios_de_caso
 
   - caption: "3) Aprendizaje no supervisado"
     chapters:
