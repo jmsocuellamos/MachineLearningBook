@@ -63,3 +63,5 @@ launch_buttons:
 sphinx:
   config:
     language: es
+    togglebutton_hint: "Mostrar"
+    togglebutton_hint_hide: "Ocultar"
