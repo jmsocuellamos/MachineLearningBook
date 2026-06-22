@@ -32,7 +32,11 @@ parts:
       - file: bloque3/C_06_Algoritmo_K_medias
       - file: bloque3/C_07_Hierarchical_cluster
       - file: bloque3/C_08_Otros_modelos_de_cluster
-
+  
+  - caption: "LAB-Aprendizaje no supervisado"
+    chapters:
+      - file: bloque3/LAB01_Amazon_Beauty
+  
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
       - file: bloque4/index
