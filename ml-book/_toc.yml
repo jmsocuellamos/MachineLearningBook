@@ -12,18 +12,18 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: "1) Fundamentos de matemáticas y aprendizaje automático"
+  - caption: "1. Fundamentos de matemáticas y aprendizaje automático"
     chapters:
       - file: bloque1/A_01_Fundamentos_matematicas_para_AA
       - file: bloque1/A_02_Intro_al_AA
 
-  - caption: "2) Introducción a scikit-learn"
+  - caption: "2. Introducción a scikit-learn"
     chapters:
       - file: bloque2/B_01_Intro_a_scikit_learn
       - file: bloque2/B_02_Scikit_learn_para_modelos_clas
       - file: bloque2/B_03_Estudios_de_caso
 
-  - caption: "3) Aprendizaje no supervisado"
+  - caption: "3. Aprendizaje no supervisado"
     chapters:
       - file: bloque3/C_01_PCA_lineales
       - file: bloque3/C_03_Otros_PCA
@@ -33,22 +33,22 @@ parts:
       - file: bloque3/C_07_Hierarchical_cluster
       - file: bloque3/C_08_Otros_modelos_de_cluster
 
-  - caption: "4) Aprendizaje supervisado inicial"
+  - caption: "4. Aprendizaje supervisado inicial"
     chapters:
       - file: bloque4/index
 
-  - caption: "5) Aprendizaje supervisado avanzado"
+  - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
       - file: bloque5/index
 
-  - caption: "6) Complementos"
+  - caption: "6. Complementos"
     chapters:
       - file: bloque6/index
 
-  - caption: "7) Laboratorios de casos prácticos"
+  - caption: "7. Laboratorios de casos prácticos"
     chapters:
       - file: bloque7/index
 
-  - caption: "8) Proyectos"
+  - caption: "8. Proyectos"
     chapters:
       - file: bloque8/index
