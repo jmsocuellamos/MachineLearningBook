@@ -27,6 +27,7 @@ parts:
     chapters:
       - file: bloque3/C_01_PCA_lineales
       - file: bloque3/C_03_Otros_PCA
+      - file: bloque3/C_04_MDS
 
   - caption: "4) Aprendizaje supervisado inicial"
     chapters:
