@@ -29,6 +29,7 @@ parts:
       - file: bloque3/C_03_Otros_PCA
       - file: bloque3/C_04_MDS
       - file: bloque3/C_05_Advanced_MDS
+      - file: bloque3/C_06_Algoritmo_K_medias
 
   - caption: "4) Aprendizaje supervisado inicial"
     chapters:
