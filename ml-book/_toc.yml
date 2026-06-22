@@ -36,7 +36,8 @@ parts:
   - caption: "LAB-Aprendizaje no supervisado"
     chapters:
       - file: bloque3/LAB01_Amazon_Beauty
-  
+      - file: bloque3/LAB02_Patrones_Ventas
+        
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
       - file: bloque4/index
