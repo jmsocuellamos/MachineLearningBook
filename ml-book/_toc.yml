@@ -37,6 +37,8 @@ parts:
     chapters:
       - file: bloque3/LAB01_Amazon_Beauty
       - file: bloque3/LAB02_Patrones_Ventas
+      - file: bloque3/LAB03_Segmentacion_Turistas
+
         
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
