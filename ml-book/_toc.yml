@@ -26,6 +26,7 @@ parts:
   - caption: "3) Aprendizaje no supervisado"
     chapters:
       - file: bloque3/C_01_PCA_lineales
+      - file: bloque3/C_03_Otros_PCA
 
   - caption: "4) Aprendizaje supervisado inicial"
     chapters:
