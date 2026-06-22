@@ -31,7 +31,7 @@ parts:
       - file: bloque3/C_05_Advanced_MDS
       - file: bloque3/C_06_Algoritmo_K_medias
       - file: bloque3/C_07_Hierarchical_cluster
-
+      - file: bloque3/C_08_Otros_modelos_de_cluster
 
   - caption: "4) Aprendizaje supervisado inicial"
     chapters:
