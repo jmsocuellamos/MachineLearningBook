@@ -44,6 +44,7 @@ parts:
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
       - file: bloque4/D_01_LR_binaria
+      - file: bloque4/D_02_LR_multinomial
 
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
