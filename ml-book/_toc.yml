@@ -43,7 +43,7 @@ parts:
         
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
-      - file: bloque4/index
+      - file: bloque4/D_01_LR_binaria
 
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
