@@ -39,7 +39,7 @@ parts:
       - file: bloque3/LAB02_Patrones_Ventas
       - file: bloque3/LAB03_Segmentacion_Turistas
       - file: bloque3/LAB04_Severidad_Cancer_Pulmon
-
+      - file: bloque3/LAB05_Variedades_Datil
         
   - caption: "4. Aprendizaje supervisado inicial"
     chapters:
