@@ -46,7 +46,8 @@ parts:
       - file: bloque4/D_01_LR_binaria
       - file: bloque4/D_02_LR_multinomial
       - file: bloque4/D_03_LDA
-
+      - file: bloque4/D_04_QDA
+      
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
       - file: bloque5/index
