@@ -48,7 +48,7 @@ parts:
       - file: bloque4/D_03_LDA
       - file: bloque4/D_04_QDA
       - file: bloque4/D_05_Knn
-
+      - file: bloque4/D_06_Naive_Bayes
       
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
