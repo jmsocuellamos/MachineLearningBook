@@ -47,6 +47,8 @@ parts:
       - file: bloque4/D_02_LR_multinomial
       - file: bloque4/D_03_LDA
       - file: bloque4/D_04_QDA
+      - file: bloque4/D_05_Knn
+
       
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
