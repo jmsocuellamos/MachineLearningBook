@@ -50,6 +50,7 @@ parts:
       - file: bloque4/D_05_Knn
       - file: bloque4/D_06_Naive_Bayes
       - file: bloque4/D_07_SVM_lineales
+      - file: bloque4/D_08_SVM_no_lineales
       
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
