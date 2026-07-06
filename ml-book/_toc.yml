@@ -49,6 +49,7 @@ parts:
       - file: bloque4/D_04_QDA
       - file: bloque4/D_05_Knn
       - file: bloque4/D_06_Naive_Bayes
+      - file: bloque4/D_07_SVM_lineales
       
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
