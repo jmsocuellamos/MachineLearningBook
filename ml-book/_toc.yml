@@ -52,6 +52,9 @@ parts:
       - file: bloque4/D_07_SVM_lineales
       - file: bloque4/D_08_SVM_no_lineales
       - file: bloque4/D_09_Decision_trees        
+      - file: bloque4/D_10_Bagging_inicial        
+
+  
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
       - file: bloque5/index
