@@ -57,7 +57,8 @@ parts:
   - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
       - file: bloque5/E_01_Bosques_aleatorios
-
+      - file: bloque5/E_02_Algoritmos_de_boosting
+      
   - caption: "6. LAB-Aprendizaje supervisado"
     chapters:
       - file: bloque7/index
