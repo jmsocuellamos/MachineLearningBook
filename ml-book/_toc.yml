@@ -53,23 +53,19 @@ parts:
       - file: bloque4/D_08_SVM_no_lineales
       - file: bloque4/D_09_Decision_trees        
       - file: bloque4/D_10_Bagging_inicial        
-
- - caption: "5. LAB-Aprendizaje supervisado inicial"
-    chapters:
-      - file: bloque7/index
       
-  - caption: "6. Aprendizaje supervisado avanzado"
+  - caption: "5. Aprendizaje supervisado avanzado"
     chapters:
       - file: bloque5/E_01_Bosques_aleatorios
 
-  - caption: "7. LAB-Aprendizaje supervisado completo"
+  - caption: "6. LAB-Aprendizaje supervisado"
     chapters:
       - file: bloque7/index
       
-  - caption: "8. Complementos"
+  - caption: "7. Complementos"
     chapters:
       - file: bloque6/index
 
-  - caption: "9. Proyectos"
+  - caption: "8. Proyectos"
     chapters:
       - file: bloque8/index
