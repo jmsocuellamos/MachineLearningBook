@@ -58,6 +58,7 @@ parts:
     chapters:
       - file: bloque5/E_01_Bosques_aleatorios
       - file: bloque5/E_02_Algoritmos_de_boosting
+      - file: bloque5/E_03_Isolation_Forest
       
   - caption: "6. LAB-Aprendizaje supervisado"
     chapters:
