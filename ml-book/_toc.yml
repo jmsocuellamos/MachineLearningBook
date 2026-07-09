@@ -82,4 +82,4 @@ parts:
 
   - caption: "8. Proyectos"
     chapters:
-      - file: bloque8/index
+      - file: bloque8/core_analytics_encargos
