@@ -78,6 +78,7 @@ parts:
   - caption: "7. Complementos"
     chapters:
       - file: bloque7/F_01_etica_IA_responsable
+      - file: bloque7/F_02_Despliegue_AA
 
   - caption: "8. Proyectos"
     chapters:
