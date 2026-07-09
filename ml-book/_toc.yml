@@ -77,7 +77,7 @@ parts:
       
   - caption: "7. Complementos"
     chapters:
-      - file: bloque6/index
+      - file: bloque7/F_01_etica_IA_responsable
 
   - caption: "8. Proyectos"
     chapters:
