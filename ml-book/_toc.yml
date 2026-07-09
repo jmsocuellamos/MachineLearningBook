@@ -62,7 +62,18 @@ parts:
       
   - caption: "6. LAB-Aprendizaje supervisado"
     chapters:
-      - file: bloque7/index
+      - file: bloque6/AS_01_Cancer_Pulmon
+      - file: bloque6/AS_02_Cardiotocografia
+      - file: bloque6/AS_03_COVID19
+      - file: bloque6/AS_04_Diabetes
+      - file: bloque6/AS_05_ERC_CKD
+      - file: bloque6/AS_06_Genes
+      - file: bloque6/AS_07_Fraude_Sanitario
+      - file: bloque6/AS_08_Mamografia
+      - file: bloque6/AS_09_Salud_Materna
+      - file: bloque6/AS_10_Satisfaccion_Aerolinea
+      - file: bloque6/AS_11_Tiroides
+      - file: bloque6/AS_12_Variedades_Datil
       
   - caption: "7. Complementos"
     chapters:
