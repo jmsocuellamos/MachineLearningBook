@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Módulos del curso</title>
+<style>
+  /* ---------- Base y tipografía ---------- */
+  :root{
+    --blue:#2563eb; --blue-l:#60a5fa; --blue-bg:#eff4ff;
+    --ink:#1e293b; --muted:#64748b; --line:#e2e8f0; --card:#ffffff;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink); background:transparent; line-height:1.5;
+    padding:6px;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+
+  /* ---------- Tarjeta de módulo (acordeón nativo) ---------- */
+  .mod-item{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    margin-bottom:14px; overflow:hidden;
+    box-shadow:0 1px 2px rgba(15,23,42,.04);
+    transition:box-shadow .2s ease, border-color .2s ease;
+  }
+  .mod-item:hover{box-shadow:0 6px 20px rgba(37,99,235,.10); border-color:#c7d7fb;}
+  .mod-item[open]{border-color:var(--blue-l);}
+
+  /* summary = cabecera clicable */
+  .mod-header{
+    list-style:none; cursor:pointer; user-select:none;
+    display:grid; align-items:center; gap:6px 16px;
+    grid-template-columns:auto 1fr auto auto auto;
+    grid-template-areas:
+      "num info badge img arrow"
+      "num desc desc img arrow";
+    padding:16px 20px;
+  }
+  .mod-header::-webkit-details-marker{display:none;}
+  .mod-header:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+
+  .mod-num{
+    grid-area:num; font-weight:800; font-size:20px; color:var(--blue);
+    background:var(--blue-bg); width:46px; height:46px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .mod-info{grid-area:info; min-width:0;}
+  .mod-info h3{margin:0; font-size:17px; font-weight:700; color:var(--ink);}
+  .mod-desc{grid-area:desc; margin:0; font-size:13.5px; color:var(--muted);}
+
+  .badge{
+    grid-area:badge; align-self:center; justify-self:end;
+    font-size:11.5px; font-weight:700; padding:4px 11px; border-radius:999px; white-space:nowrap;
+  }
+  .b-basic{background:#dcfce7; color:#15803d;}
+  .b-inter{background:#fef3c7; color:#b45309;}
+  .b-adv{background:#fee2e2; color:#b91c1c;}
+
+  .mod-img{grid-area:img; width:52px; height:52px; justify-self:end;}
+  .mod-img svg{width:100%; height:100%; display:block;}
+
+  .mod-arrow{
+    grid-area:arrow; font-size:26px; color:var(--blue-l); line-height:1;
+    transition:transform .25s ease; justify-self:end;
+  }
+  .mod-item[open] .mod-arrow{transform:rotate(90deg);}
+
+  /* ---------- Cuerpo desplegable ---------- */
+  .mod-body{padding:0 20px 20px; border-top:1px solid var(--line); margin-top:2px;}
+  .mod-section-label{
+    font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--muted); margin:16px 0 8px;
+  }
+  .topics{display:flex; flex-direction:column; gap:6px;}
+  .topic{
+    background:#f8fafc; border:1px solid var(--line); border-radius:8px;
+    padding:8px 12px; font-size:14px;
+  }
+
+  .notebooks{display:flex; flex-direction:column; gap:8px;}
+  .nb-link{
+    display:flex; align-items:center; gap:12px; text-decoration:none;
+    background:#f8fafc; border:1px solid var(--line); border-radius:10px;
+    padding:10px 14px; color:var(--ink);
+    transition:background .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .nb-link:hover{background:#fff7ed; border-color:#fdba74; transform:translateX(3px);}
+  .nb-icon{width:26px; height:26px; flex:none;}
+  .nb-icon svg{width:100%; height:100%; display:block;}
+  .nb-label{flex:1; font-size:14px; font-weight:600;}
+  .nb-arrow{color:var(--muted); font-size:16px;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:560px){
+    .mod-header{
+      grid-template-columns:auto 1fr auto;
+      grid-template-areas:
+        "num info arrow"
+        "num desc arrow"
+        "num badge arrow";
+      gap:4px 12px;
+    }
+    .mod-img{display:none;}
+    .badge{justify-self:start;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Definiciones SVG reutilizables (logo de Colab) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="colab-logo" viewBox="0 0 1000 1000">
+    <path fill="#E8710A" d="M188 312c-104 104-104 272 0 376 92 92 234 103 338 33-58-24-108-63-146-101-58-58-58-152 0-210s152-58 210 0c38-38 88-77 146-101-70-70-246-93-338-1l-8 8-202 197z"/>
+    <path fill="#F9AB00" d="M812 688c104-104 104-272 0-376-92-92-234-103-338-33 58 24 108 63 146 101 58 58 58 152 0 210s-152 58-210 0c-38 38-88 77-146 101 70 70 246 93 338 1l8-8 202-197z"/>
+    <circle cx="500" cy="500" r="74" fill="#F9AB00"/>
+  </symbol>
+</svg>
+
+<div class="wrap">
+
+  <!-- ============ MÓDULO 01 ============ -->
+  <details class="mod-item">
+    <summary class="mod-header">
+      <span class="mod-num">01</span>
+      <div class="mod-info">
+        <h3>Fundamentos de matemáticas y aprendizaje automático</h3>
+      </div>
+      <span class="badge b-basic">Básico</span>
+      <p class="mod-desc">Álgebra lineal, Cálculo, Geometría. Introducción al aprendizaje automático</p>
+      <div class="mod-img">
+        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <rect width="72" height="72" rx="10" fill="#eff4ff"/>
+          <line x1="14" y1="58" x2="62" y2="58" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="14" y1="58" x2="14" y2="10" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="48" x2="38" y2="22" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+          <polygon points="38,22 33,26 40,29" fill="#60a5fa"/>
+          <line x1="28" y1="48" x2="56" y2="36" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+          <polygon points="56,36 50,33 53,40" fill="#2563eb"/>
+          <circle cx="20" cy="48" r="3" fill="#2563eb"/>
+          <circle cx="28" cy="48" r="3" fill="#60a5fa"/>
+        </svg>
+      </div>
+      <span class="mod-arrow">›</span>
+    </summary>
+
+    <div class="mod-body">
+      <div class="mod-section-label">Temas del módulo</div>
+      <div class="topics">
+        <div class="topic">Álgebra lineal, Cálculo diferencial e interpretaciones geométricas</div>
+        <div class="topic">Introducción al aprendizaje automático</div>
+      </div>
+
+      <div class="mod-section-label">Cuadernos de Google Colab</div>
+      <div class="notebooks">
+        <a class="nb-link" href="https://colab.research.google.com/drive/1kI3J60h0QJsemv77GoZ_z7ha7vK5TMYz" target="_blank" rel="noopener">
+          <span class="nb-icon"><svg viewBox="0 0 1000 1000"><use href="#colab-logo"/></svg></span>
+          <span class="nb-label">01-01 · Fundamentos de matemáticas para machine learning</span>
+          <span class="nb-arrow">↗</span>
+        </a>
+        <a class="nb-link" href="https://colab.research.google.com/drive/18RR8vJS6P8DrI2n8NHSDN5MHLuaFzF8S" target="_blank" rel="noopener">
+          <span class="nb-icon"><svg viewBox="0 0 1000 1000"><use href="#colab-logo"/></svg></span>
+          <span class="nb-label">01-02 · Introducción al aprendizaje automático</span>
+          <span class="nb-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <!-- ============ PLANTILLA: copia este bloque para cada módulo nuevo ============
+       - Cambia el número (mod-num), el título (h3) y la descripción (mod-desc).
+       - Badge: usa  b-basic (verde) · b-inter (ámbar) · b-adv (rojo).
+       - Añade tantos .topic y .nb-link como necesites.
+
+  <details class="mod-item">
+    <summary class="mod-header">
+      <span class="mod-num">02</span>
+      <div class="mod-info"><h3>Título del módulo</h3></div>
+      <span class="badge b-inter">Intermedio</span>
+      <p class="mod-desc">Descripción breve del módulo</p>
+      <div class="mod-img">
+        <svg viewBox="0 0 72 72"><rect width="72" height="72" rx="10" fill="#eff4ff"/></svg>
+      </div>
+      <span class="mod-arrow">›</span>
+    </summary>
+    <div class="mod-body">
+      <div class="mod-section-label">Temas del módulo</div>
+      <div class="topics">
+        <div class="topic">Tema 1</div>
+      </div>
+      <div class="mod-section-label">Cuadernos de Google Colab</div>
+      <div class="notebooks">
+        <a class="nb-link" href="URL_DEL_COLAB" target="_blank" rel="noopener">
+          <span class="nb-icon"><svg viewBox="0 0 1000 1000"><use href="#colab-logo"/></svg></span>
+          <span class="nb-label">02-01 · Nombre del cuaderno</span>
+          <span class="nb-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </details>
+  ============================================================================ -->
+
+</div>
+
+<!-- Ajuste automático de altura del iframe (funciona si el fichero está en el mismo Moodle;
+     si lo alojas fuera, ver la nota del administrador en las instrucciones). -->
+<script>
+  (function () {
+    function sendHeight() {
+      var h = document.documentElement.scrollHeight;
+      if (window.parent) window.parent.postMessage({ moodleEmbedHeight: h }, "*");
+    }
+    window.addEventListener("load", sendHeight);
+    document.addEventListener("toggle", function (e) {
+      if (e.target && e.target.tagName === "DETAILS") sendHeight();
+    }, true);
+    if (window.ResizeObserver) new ResizeObserver(sendHeight).observe(document.body);
+  })();
+</script>
+
+</body>
+</html>
