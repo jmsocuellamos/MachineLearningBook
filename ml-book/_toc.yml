@@ -79,7 +79,12 @@ parts:
     chapters:
       - file: bloque7/F_01_etica_IA_responsable
       - file: bloque7/F_02_Despliegue_AA
+      - file: bloque7/F_03_Despliegue_con_Streamlit
+      - file: bloque7/F_04_Despliegue_con_Gradio
+      - file: bloque7/F_05_Despliegue_con_Dash
+      - file: bloque7/streamlit_colab_ngrok
 
+      
   - caption: "8. Proyectos"
     chapters:
       - file: bloque8/core_analytics_encargos
