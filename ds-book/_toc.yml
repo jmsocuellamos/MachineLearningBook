@@ -1,0 +1,55 @@
+# Tabla de contenidos del libro.
+# -------------------------------------------------------------------
+# CÓMO EDITAR:
+#   * Añadir un cuaderno  -> añade una línea "- file: bloqueN/nombre_sin_extension"
+#   * Quitar un cuaderno  -> borra su línea
+#   * Reordenar           -> mueve las líneas (el orden aquí es el orden del libro)
+#   * Añadir un bloque    -> añade otro "- caption:" con su lista de "chapters:"
+# Las rutas NO llevan la extensión .ipynb / .md
+# -------------------------------------------------------------------
+
+format: jb-book
+root: intro
+
+parts:
+  - caption: "1. Introducción a Python"
+    chapters:
+      - file: bloque1/A_01_Intro_Python_Colab
+      - file: bloque1/A_02_Progr_with_Python
+      - file: bloque1/A_03_Modulos_math_random_time_externos
+      - file: bloque1/A_04_Matplotlib
+      - file: bloque1/A_05_Numpy
+      - file: bloque1/A_06_Pandas_I
+      - file: bloque1/A_07_Pandas_II
+      - file: bloque1/A_08_Seaborn
+
+  - caption: "2. Análisis exploratorio"
+    chapters:
+      - file: bloque2/B_01_Tabulando_datos
+      - file: bloque2/B_02_AED_univariante
+      - file: bloque2/B_03_AED_multivariante
+      - file: bloque2/B_04_Ejercicios_AED
+
+  - caption: "3. Probabilidad"
+    chapters:
+      - file: bloque3/C_01_Intro_probabilidad
+      - file: bloque3/C_02_Probabilidad_condicionada
+      - file: bloque3/C_03_Ejercicios_probabilidad
+      - file: bloque3/C_04_VA_discretas
+      - file: bloque3/C_05_Ejercicios_VA_discretas
+      - file: bloque3/C_06_VA_continuas
+      - file: bloque3/C_07_Ejercicios_VA_continuas
+        
+  - caption: "4. Data science"
+    chapters:
+      - file: bloque4/D_01_Intro_IE
+      - file: bloque4/D_02_IE_proporciones
+      - file: bloque4/D_03_Ejercicios_IE_proporciones
+      - file: bloque4/D_04_IE_medias
+      - file: bloque4/D_05_Ejercicios_IE_medias
+      
+  - caption: "5. Modelización inicial"
+    chapters:
+      - file: bloque5/E_01_Intro_modelos
+      - file: bloque5/E_02_Modelo_RLM
+      - file: bloque5/E_03_Modelo_logistico

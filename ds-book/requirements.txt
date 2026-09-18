@@ -1,0 +1,10 @@
+# Necesario para CONSTRUIR el libro (versión 1, motor Sphinx):
+jupyter-book>=1.0,<2
+
+# Necesario solo si activas la ejecución de los cuadernos (execute_notebooks != "off").
+# Son las librerías habituales del curso; añade o quita según lo que usen tus cuadernos.
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
