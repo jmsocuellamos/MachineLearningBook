@@ -1,24 +1,49 @@
-name: deploy-book
+name: deploy-books
 on:
   push:
     branches: [main]
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Evita que dos despliegues se pisen si haces varios pushes seguidos
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy-book:
+  deploy-books:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install -r requirements.txt
-        working-directory: ml-book
+
+      # --- Instalar dependencias de los dos libros ---
+      - run: pip install -r ds-book/requirements.txt
+      - run: pip install -r ml-book/requirements.txt
+
+      # --- Construir cada libro por separado ---
+      - run: jupyter-book build .
+        working-directory: ds-book
+
       - run: jupyter-book build .
         working-directory: ml-book
+
+      # --- Montar un único sitio con los dos libros en subcarpetas ---
+      - name: Ensamblar sitio combinado
+        run: |
+          mkdir -p site
+          cp -r ds-book/_build/html site/ds-book
+          cp -r ml-book/_build/html site/ml-book
+          cp index.html site/index.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: "ml-book/_build/html"
+          path: "site"
+
       - uses: actions/deploy-pages@v4
